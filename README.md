@@ -1,6 +1,6 @@
-Get Mastry in Angular JS
+Get Mastery in Angular JS
 ========================
 
-From this session you will get everyuthing you need to know about Angular JS.
+From this session you will get everything you need to know about Angular JS.
 
 
