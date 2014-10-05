@@ -1,13 +1,41 @@
-# Angular JS Services in Depth
+## Angular Form Validation
 
-## 1. The Services That Expose DOM API Features
+- Form Name is required
+- Form Field Name is required for displaying feedback messages
 
-### Global Object Dervices
 
-1. **$anchorScroll** - Scrolls the browser window to a specified anchor
-2. **$document** - Provides a jqLite object that contains the DOM window.document object
-3. **$interval** - Provides an enhanced wrapper around the window.setInterval function
-4. **$location** - Provides access to the URL
-5. **$log** - Provides a wrapper around the console object
-6. **$timeout** - Provides an enhanced wrapper around the window.setITimeout function
-7. **$window** - Provides a reference to the DOM window object
+## Validation attributes...
+
+```
+required
+ng-minlength
+ng-maxlength
+ng-pattern 
+email
+number
+url
+```
+
+## Form States
+
+```
+- formName.inputfieldName.<state>
+$pristine - un-modified form
+$dirty - modified form
+$valid - valid form
+$invalid - in-valid form
+$errors
+
+- classes added by angular based on state 
+.ng-pristine {}
+.ng-dirty {}
+.ng-valid {}
+.ng-invalid {}
+
+```
+
+
+
+
+
+

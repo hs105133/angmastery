@@ -1,11 +1,35 @@
 # Angular JS Filters
 
+Filter provides a way to format the data we display to the user.
+
+## Applying Filter
+
+in HTML `{{ name | uppercase }}`
+
+or 
+
+from within javascript...
+
+```javascript
+angular.module("myApp")
+  .controller('DemoController', function($scope, $filter) {
+    $scope.name = $filter('uppercase')('Hemant'); // HEMANT
+  });
+```
+
+## Filter with argument
+
+```html
+<!-- Displays: 123.46 -->
+{{ 123.456789 | number:2 }}
+```
+
 ## 1. Filters that operates on single values
 
 ### currency - This filter formats currency values.
 
 ```html
-// 1.2 -> $1.20
+<!-- 1.2 -> $1.20 -->
 <p>Price: {{ product.price | currency }}</p>
 ```
 ### date - This filter formats date values.
@@ -49,10 +73,42 @@
 <tr ng-repeat="p in products | limitTo:limitVal">  </tr>
 ```
 
-### filter - Filtering collection based on some key
+### filter - Filtering collection based on some key ( string, object, function)
+
+- key as string
 
 ```html
-<tr ng-repeat="p in products | filter:{category: 'Fish'}"> </tr>
+<p>{{ ['Hemant', 'Singh', 'Varun', 'Vinay', 'Ajay'] | filter:'n' }}</p>
+<!-- ["Hemant","Singh","Varun","Vinay"] -->
+```
+
+- key as Object
+
+```html
+<p>  
+  [{
+      'name': 'Varun',
+      'City': 'Hyderabad'
+    }, 
+    {
+      'name': 'Hemant',
+      'City': 'Blr'
+  }] | filter: { 'name': 'Hemant'}
+</p>
+<!-- [{"name":"Hemant","City":"Blr"}] -->
+```
+
+- key as function
+
+```html
+{{ ['Hemant', 'likes', 'to', 'travel'] | filter:isCapitalized }}
+<!-- ["Hemant"] -->
+```
+
+```javascript
+$scope.isCapitalized = function(str) { 
+  return str[0] == str[0].toUpperCase(); 
+}
 ```
 
 ### orderBy - Sorting items (asc/desc)

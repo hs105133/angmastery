@@ -1,13 +1,56 @@
-# Angular JS Services in Depth
+# Angular Animation
 
-## 1. The Services That Expose DOM API Features
+## Built-in Directive that support animation
 
-### Global Object Dervices
+Directive| Names
+---------|-----------
+ng-repeat| enter, leave, move
+ng-view | enter, leave
+ng-include | enter, leave
+ng-switch | enter, leave
+ng-if | enter, leave
+ng-class | add, remove
+ng-show | add, remove
+ng-hide | add, remove
 
-1. **$anchorScroll** - Scrolls the browser window to a specified anchor
-2. **$document** - Provides a jqLite object that contains the DOM window.document object
-3. **$interval** - Provides an enhanced wrapper around the window.setInterval function
-4. **$location** - Provides access to the URL
-5. **$log** - Provides a wrapper around the console object
-6. **$timeout** - Provides an enhanced wrapper around the window.setITimeout function
-7. **$window** - Provides a reference to the DOM window object
+```javascript
+angular.module("myApp", ["ngAnimate"]);
+```
+
+```html
+<div ng-view class="slideAnimation"></div>
+```
+
+```stylesheets
+.slideAnimation.ng-enter{
+	opacity: 0;
+	transition: 2s linear all;
+}
+
+.slideAnimation.ng-enter-active{
+	opacity: 1;
+}
+
+```
+
+## Support Touch Events
+
+- Use ngTouch module that provides $swipe service
+- The ngTouch swipe events can be used to detect left-to-right and right-to-left swipe gestures
+- replacement of ng-click for touch devices
+
+```html
+<div class="well"
+	ng-swipe-right="handleSwipe('left-to-right')"
+	ng-swipe-left="handleSwipe('right-to-left')">
+</div>
+```
+
+```javascript
+angular.module("exampleApp", ["ngTouch"])
+	.controller("defaultCtrl", function ($scope, $element) {
+		$scope.handleSwipe = function(direction) {
+			// handle swipe event here
+		}
+	});
+```
