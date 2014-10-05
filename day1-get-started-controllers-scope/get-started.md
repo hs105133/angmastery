@@ -1,13 +1,22 @@
-# Angular JS Services in Depth
+## Special about Angular JS
 
-## 1. The Services That Expose DOM API Features
+1. Great code organization
+2. Testable code 
+3. template is html that you already know
+4. two way data binding saves you 100 of lines of code.
 
-### Global Object Dervices
+## Big Picture
 
-1. **$anchorScroll** - Scrolls the browser window to a specified anchor
-2. **$document** - Provides a jqLite object that contains the DOM window.document object
-3. **$interval** - Provides an enhanced wrapper around the window.setInterval function
-4. **$location** - Provides access to the URL
-5. **$log** - Provides a wrapper around the console object
-6. **$timeout** - Provides an enhanced wrapper around the window.setITimeout function
-7. **$window** - Provides a reference to the DOM window object
+![Angular JS Big Picture](../images/big-picture.png)
+
+## Hello World
+
+```
+ng-app
+ng-controller
+ng-click
+ng-show/ng-hide
+filter
+ng-init
+ng-repeat
+```
