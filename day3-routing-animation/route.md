@@ -35,9 +35,9 @@ or
 controller: function($scope) {}
 
 ### template
-
+```html
 template: '<div><h2>About Page Title</h2></div>'
-
+```
 ### templateUrl 
 
 templateUrl: 'views/template_name.html'
