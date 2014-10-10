@@ -574,3 +574,8 @@ angular.module("myApp")
 5. **$log** - Provides a wrapper around the console object
 6. **$timeout** - Provides an enhanced wrapper around the window.setITimeout function
 7. **$window** - Provides a reference to the DOM window object
+
+## References
+
+- [$http service demo and in depth tutorial](https://gist.github.com/hemantajax/de9b5f1a0383fa10c122)
+- [$resource service demo and in depth tutorial](https://gist.github.com/hemantajax/35b6636d4f9d24889a7c)
