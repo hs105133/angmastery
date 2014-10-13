@@ -579,3 +579,5 @@ angular.module("myApp")
 
 - [$http service demo and in depth tutorial](https://gist.github.com/hemantajax/de9b5f1a0383fa10c122)
 - [$resource service demo and in depth tutorial](https://gist.github.com/hemantajax/35b6636d4f9d24889a7c)
+- [Plunker crud with angular js - $http](http://embed.plnkr.co/hjofUnR1cAfv9r6M8Ttu/preview)
+- [Plunker crud with angular js - $resource](http://embed.plnkr.co/Sjm9QqYrbUp7NIVVEyjS/preview)
